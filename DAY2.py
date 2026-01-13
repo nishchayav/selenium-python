@@ -23,7 +23,7 @@ print("remainder",x%y)
 
 
 
-'''Built in Functions'''
+'''Builtin Functions'''
 import math
 x=int(input("enter the number"))
 print("square root of",x,"is :",math.sqrt(x))
@@ -55,7 +55,7 @@ print("Hi" *3)
 
 print(text.upper())
 print(a.replace("python","java"))
-"""
+
 
 
 '''Lists'''
@@ -90,3 +90,128 @@ print(name)
 
 name.insert(3,"Kish")
 print(name)
+
+
+'''Tuples'''
+tup1=(10,20,30,40,50,30)
+tup2="apple","banana","lemon"
+print(tup1[0])
+print(tup2[1])
+print(tup1[:2])
+print(tup1[4:])
+print(tup1)
+print(tup1.count(30))
+print(tup1.index(40))
+
+#reverse num
+b=10
+a,b=b,a
+print(a,b)
+
+data=10,20,30
+a,b,c=data
+print(a,b,c)
+
+
+
+'''Dictionary'''
+
+student={
+    "name": "Nishchaya",
+    "age": 23,
+    "course": "Python"
+}
+
+print(student)
+print(student["name"])
+print(student.get("age"))
+
+student["marks"]=85
+student["age"]=24
+print(student)
+print(student["name"])
+print(student.get("age"))
+student.pop("age")
+print(student)
+student.popitem()
+print(student)
+
+print(student.keys())
+print(student.values())
+
+
+for key in student:
+    print(key,student[key])
+
+if "name" in student:
+    print("key exists")
+
+employees={
+    101:{"name":"xyz","salary":2000},
+    102:{"name":"zyx","salary":2000},
+}
+print(employees[101]["name"])
+
+
+
+
+'''Sets'''
+myset={1,2,3,4,5,3,2,1,6}
+print(myset)
+
+for i in myset:
+    print(i)
+myset.add(100)
+print(myset)
+
+
+A={1,2,3}
+B={3,4,5}
+
+print(A|B)
+print(A&B)
+print(2 in A)
+
+"""
+
+'''if else elif conditions'''
+num=int(input("enter the number"))
+if num%2==0:
+    print("Even")
+else:
+    print("Odd")
+
+
+marks=int(input("enter your marks upto 100"))
+
+if marks>=90:
+    print("Grade A")
+elif marks>=80:
+    print("Grade B")
+else:
+    print("Grade C")
+
+
+j=0
+while j<=5:
+    print(j)
+    j+=1
+    if j==2:
+        break
+
+day=int(input("enter the day"))
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 4:
+        print("Friday")
+    case 4:
+        print("Saturday")
+    case 4:
+        print("Sunday")
