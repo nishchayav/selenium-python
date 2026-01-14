@@ -1,4 +1,4 @@
-"""
+
 '''wap to check if you're eligible to vote'''
 
 x=int(input("enter the number"))
@@ -172,7 +172,7 @@ print(A|B)
 print(A&B)
 print(2 in A)
 
-"""
+
 
 '''if else elif conditions'''
 num=int(input("enter the number"))
@@ -190,6 +190,7 @@ elif marks>=80:
     print("Grade B")
 else:
     print("Grade C")
+
 
 
 j=0
