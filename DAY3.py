@@ -94,10 +94,10 @@ object=count(20)
 for num in object:
     print(num)
 
-"""
 
 
-'''Generators'''
+
+''Generators''
 
 def numbers():
     yield 1
@@ -110,3 +110,97 @@ print(next(gen))
 print(next(gen))
 print(next(gen))
 
+
+'''Files'''
+
+#TXT
+file=open("nishchayavishwakarma.txt","r")
+content=file.readline()
+print(content)
+file.close()
+
+file=open("nishchayavishwakarma.txt","a")
+file.write("adding something init")
+file.close()
+
+file=open("nishchayavishwakarma.txt","w")
+file.write("Hello guys\n")
+file.write("This is my write example")
+file.close()
+
+#CSV
+import csv
+with open("student.csv","w",newline="") as file:
+    writer=csv.writer(file)
+    writer.writerow(["Name","ID","Age"])
+    writer.writerow(["Nish",1,20])
+    writer.writerow(["Vish", 2, 21])
+    writer.writerow(["Shish", 3, 22])
+
+#JSON
+import json
+data = {
+    "Name": "Nish",
+    "Age": "23",
+    "Location": "Bhopal",
+    "Skills": ['SQL', 'Python', 'HTML']
+}
+with open("data.json", 'w') as file:
+    json.dump(data, file, indent=4)
+
+
+#XML
+import xml.etree.ElementTree as ET
+
+root=ET.Element("employee")
+emp1=ET.SubElement(root,"emp")
+ET.SubElement(emp1,"id").text="101"
+ET.SubElement(emp1,"Name").text="Nish"
+ET.SubElement(emp1,"Salary").text="300000"
+emp2=ET.SubElement(root,"emp")
+ET.SubElement(emp2,"id").text="102"
+ET.SubElement(emp2,"Name").text="Vish"
+ET.SubElement(emp2,"Salary").text="200000"
+
+tree=ET.ElementTree(root)
+tree.write("employee.xml")
+print("xml file written successfully")
+
+
+
+'''Decorators'''
+def mydecorator(func):
+    def wrapper():
+        print("Before Function Call")
+        func()
+        print("After Function Call")
+    return wrapper
+
+@mydecorator
+def sayhello():
+    print("Hello")
+sayhello()
+
+
+
+'''Descriptors'''
+class mydescriptor:
+    def __get__(self, object, owner):
+        print("Getting Value")
+        return object._x
+    def __set__(self, object, value):
+        print("Setting Value")
+        object._x = value
+
+class Test:
+    x=mydescriptor
+t=Test()
+t.x=10
+print(t.x)
+
+"""
+
+'''Enumurators'''
+fruits=['apple','banana','orange','papaya','lemon']
+for index, value in enumerate(fruits):
+    print(index, value)
