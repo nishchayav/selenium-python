@@ -36,7 +36,6 @@ Create a small Python package with:
 
 
 # writer
-
 def write_numbers_to_file(filename):
     try:
         with open(filename, "w") as file:
@@ -56,7 +55,6 @@ def write_numbers_to_file(filename):
 
 
 # reader
-
 def read_file(filename):
     try:
         with open(filename, "r") as file:
