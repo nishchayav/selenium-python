@@ -3,7 +3,7 @@
 2. Create a generator function that yields the first N Fibonacci numbers
 3. Demonstrate the difference between using the iterator and generator by printing values using a for loop'''
 
-"""
+
 class NumberIterator:
     def __init__(self, n):
         self.n = n
@@ -35,7 +35,6 @@ def fibonacci(n):
 print("\nUsing Generator:")
 for num in fibonacci(10):
     print(num)
-"""
 
 '''Question: Descriptors	
 Create a class Employee with attributes:	
