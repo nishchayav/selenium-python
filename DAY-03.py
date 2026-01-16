@@ -1,4 +1,4 @@
-"""
+
 '''Functions'''
 
 def add(a,b):
@@ -198,7 +198,7 @@ t=Test()
 t.x=10
 print(t.x)
 
-"""
+
 
 '''Enumurators'''
 fruits=['apple','banana','orange','papaya','lemon']
