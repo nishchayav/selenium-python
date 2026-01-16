@@ -1,4 +1,4 @@
-"""
+
 '''Constructors & Destructors'''
 class employee:
     def __init__(self,name):
@@ -66,7 +66,7 @@ class Manager(Employee):
 m=Manager("Nish")
 m.salary()
 
-"""
+
 
 '''Multiple Abstract Class constructor'''
 from abc import ABC,abstractmethod
