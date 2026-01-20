@@ -43,7 +43,7 @@ obj=C()
 obj.c()
 obj.b()
 obj.a()
-"""
+
 
 '''Hierarchical inheritance'''
 class Parent:
@@ -65,3 +65,55 @@ c1.parent1()
 c2=Child2()
 c2.parent1()
 c2.c2()
+
+
+'''Operator overloading'''
+class box1:
+    def __init__(self, value):
+        self.value=value
+    def add(self, other):
+        return self.value + other.value
+
+b1=box1(50)
+b2=box1(10)
+print (b1.add(b2))
+
+
+'''Method overloading'''
+
+class Calc:
+    def add(self, *args):
+        total = 0
+        for x in args:
+            total += x
+        return total
+
+
+c = Calc()
+print(c.add(2, 3))
+print(c.add(2, 3, 4))
+print(c.add(1, 2, 3, 4, 5))
+
+
+
+
+'''Overriding'''
+
+class animal:
+    def sound(self):
+        print("animal sound")
+
+class dog(animal):
+    def sound(self):
+        print("Dog Barks");
+
+class cat(animal):
+    def sound(self):
+        print("cat meows")
+
+obj = [dog(), cat()]
+
+for a in obj:
+    a.sound()
+
+"""
