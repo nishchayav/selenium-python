@@ -1,5 +1,21 @@
 import pytest
-from calculator_DAY_9 import add, subtract, multiply, divide
+from calculator_DAY_10 import add, subtract, multiply, divide
+
+
+def setup_module(module):
+    print("\n[setup_module] Module setup")
+
+def teardown_module(module):
+    print("\n[teardown_module] Module teardown")
+
+def setup_function(function):
+    print("\n[setup_function] Before test")
+
+def teardown_function(function):
+    print("\n[teardown_function] After test")
+
+
+
 
 def test_addition():
     assert add(2, 3) == 5
