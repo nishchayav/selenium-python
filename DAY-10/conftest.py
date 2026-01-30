@@ -12,3 +12,18 @@ def calculator_resource():
     print("\n[SETUP] Calculator resource initialized")
     yield
     print("\n[TEARDOWN] Calculator resource released")
+
+
+def pytest_addoption(parser):
+    parser.addoption(
+        "--env",
+        action="store",
+        default="qa",
+        help="Environment to run tests against"
+    )
+
+import pytest
+
+@pytest.fixture
+def env(request):
+    return request.config.getoption("--env")

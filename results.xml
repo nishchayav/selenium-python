@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.210" timestamp="2026-01-30T17:17:29.334937+05:30" hostname="LAPTOP-PP3AF9LE"><testcase classname="" name="Smart-University-Management-System.test_system" time="0.000"><error message="collection failure">Smart-University-Management-System\filehandler.py:8: in save_students_json
+    with open(path, "w") as f:
+         ^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'data/students.json'
+
+During handling of the above exception, another exception occurred:
+Smart-University-Management-System\test_system.py:150: in &lt;module&gt;
+    save_students_json(student_data, "data/students.json")
+Smart-University-Management-System\filehandler.py:12: in save_students_json
+    raise FileAccessError("Error: File not found")
+E   exceptions.FileAccessError: Error: File not found</error></testcase></testsuite></testsuites>
