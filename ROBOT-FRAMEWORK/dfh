@@ -1,0 +1,32 @@
+*** Settings ***
+Library    SeleniumLibrary
+Library     DataDriver    file=DDtestdata.xlsx    Sheet1
+Test Template    orangehrmlogin with Excel
+
+
+*** Variables ***
+${url}      https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+${browser}      firefox
+
+
+*** Keywords ***
+open orangehrm
+    open browser    ${url}     ${browser}
+    maximize browser window
+orangehrmlogin with Excel
+    [Arguments]    ${username}  ${password}
+    Input text    name=username    ${username}
+    input text      name=password    ${password}
+    sleep           5s
+     capture page screenshot    beforelogin.png
+    click button
+     sleep           5s
+    capture page screenshot    afterlogin.png
+    close browser
+
+*** Test Cases ***
+temp1
+    open orangehrm
+     sleep           5s
+   orangehrmlogin with Excel
+    ${username}   ${password}
