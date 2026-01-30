@@ -1,56 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-29T16:19:14.455264" rpa="false" schemaversion="5">
-<suite id="s1" name="TC-04-login" source="D:\WIPRO- Selenium with Python\selenium-python\ROBOT-FRAMEWORK\TC-04-login.robot">
-<test id="s1-t1" name="TC004_Login.robot" line="12">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-01-29T16:19:14.691151" level="INFO">Opening browser 'firefox' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-01-29T16:19:14.690858" elapsed="11.724399"/>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-30T17:48:16.362492" rpa="false" schemaversion="5">
+<suite id="s1" name="TC-DailyQues12-2" source="D:\WIPRO- Selenium with Python\selenium-python\ROBOT-FRAMEWORK\TC-DailyQues12-2.robot">
+<test id="s1-t1" name="Verify Automation Environment Setup" line="8">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>===== Verifying Automation Environment =====</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T17:48:16.681774" elapsed="0.000374"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-29T16:19:31.416158" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-29T16:19:26.415658" elapsed="5.000626"/>
+<kw name="Verify Python Installation">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-30T17:48:16.682884" level="INFO">Checking Python installation</msg>
+<arg>Checking Python installation</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-30T17:48:16.682695" elapsed="0.000253"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-29T16:19:31.417098" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
-<arg>name=username</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-29T16:19:31.416635" elapsed="0.030396"/>
+<kw name="Run Process" owner="Process">
+<msg time="2026-01-30T17:48:16.683763" level="INFO">Starting process:
+python --version</msg>
+<msg time="2026-01-30T17:48:16.688568" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-01-30T17:48:16.695096" level="INFO">Process completed.</msg>
+<msg time="2026-01-30T17:48:16.695332" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>python</arg>
+<arg>--version</arg>
+<arg>stdout=PIPE</arg>
+<arg>stderr=PIPE</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-01-30T17:48:16.683040" elapsed="0.012329"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-29T16:19:31.447636" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
-<arg>name=password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-29T16:19:31.447362" elapsed="0.015046"/>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-01-30T17:48:16.696270" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-01-30T17:48:16.695557" elapsed="0.000773"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-01-29T16:19:31.463003" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
-<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-29T16:19:31.462791" elapsed="5.079303"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Python Installed: ${result.stdout}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T17:48:16.696426" elapsed="0.001538"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-01-29T16:19:36.542498" elapsed="2.895521"/>
+<status status="PASS" start="2026-01-30T17:48:16.682449" elapsed="0.015624"/>
 </kw>
-<status status="PASS" start="2026-01-29T16:19:14.689902" elapsed="24.748400"/>
+<kw name="Verify Robot Framework Installation">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-30T17:48:16.698754" level="INFO">Checking Robot Framework installation</msg>
+<arg>Checking Robot Framework installation</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-30T17:48:16.698578" elapsed="0.000216"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2026-01-30T17:48:16.699327" level="INFO">Starting process:
+robot --version</msg>
+<msg time="2026-01-30T17:48:16.702687" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-01-30T17:48:17.042255" level="INFO">Process completed.</msg>
+<msg time="2026-01-30T17:48:17.042464" level="INFO">${result} = &lt;result object with rc 251&gt;</msg>
+<var>${result}</var>
+<arg>robot</arg>
+<arg>--version</arg>
+<arg>stdout=PIPE</arg>
+<arg>stderr=PIPE</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-01-30T17:48:16.698880" elapsed="0.343618"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-01-30T17:48:17.043229" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-01-30T17:48:17.043349" level="FAIL">251 != 0</msg>
+<arg>${result.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2026-01-30T17:48:17.042683" elapsed="0.000808">251 != 0</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Robot Framework Installed: ${result.stdout}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-30T17:48:17.043600" elapsed="0.000025"/>
+</kw>
+<status status="FAIL" start="2026-01-30T17:48:16.698356" elapsed="0.345372">251 != 0</status>
+</kw>
+<kw name="Print Robot Framework Version">
+<status status="NOT RUN" start="2026-01-30T17:48:17.043971" elapsed="0.000031"/>
+</kw>
+<kw name="Verify SeleniumLibrary Import">
+<status status="NOT RUN" start="2026-01-30T17:48:17.044240" elapsed="0.000040"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>===== Environment Verification Completed Successfully =====</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-30T17:48:17.044453" elapsed="0.000031"/>
+</kw>
+<status status="FAIL" start="2026-01-30T17:48:16.680849" elapsed="0.363865">251 != 0</status>
 </test>
-<status status="PASS" start="2026-01-29T16:19:14.456879" elapsed="24.981998"/>
+<status status="FAIL" start="2026-01-30T17:48:16.364048" elapsed="0.681249"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TC-04-login" id="s1" pass="1" fail="0" skip="0">TC-04-login</stat>
+<stat name="TC-DailyQues12-2" id="s1" pass="0" fail="1" skip="0">TC-DailyQues12-2</stat>
 </suite>
 </statistics>
 <errors>
