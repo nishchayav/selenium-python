@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    DataDriver    file=DDtestdataCS2.xlsx
+Library    DataDriver    file=DDtestdataCS1.xlsx
 Test Template    Qafox Login With Excel
 Suite Setup    Open Qafox
 Suite Teardown    Close Qafox

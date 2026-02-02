@@ -19,6 +19,11 @@ Generate Random Email
     ${email}=   Set Variable    user${rand}@test.com
     RETURN    ${email}
 
+Save To Excel
+    [Arguments]    ${email}    ${password}
+    Run Process    python    DDexcelwrite.py    ${email}    ${password}
+
+
 Create Demo Account
     Click Element    xpath=//*[@id="top-links"]/ul/li[2]/a/span[1]
     Click Element    xpath=//*[@id="top-links"]/ul/li[2]/ul/li[1]/a
@@ -44,9 +49,6 @@ Create Demo Account
 
     Logout From Qafox
 
-Save To Excel
-    [Arguments]    ${email}    ${password}
-    Run Process    python    DDexcelwrite.py    ${email}    ${password}
 
 Logout From Qafox
     # Logout from right panel
