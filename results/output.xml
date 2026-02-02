@@ -1,34 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-30T18:05:29.373645" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-02T23:34:08.135515" rpa="false" schemaversion="5">
 <suite id="s1" name="Selenium-Python" source="D:\WIPRO- Selenium with Python\selenium-python">
 <suite id="s1-s1" name="ROBOT-FRAMEWORK" source="D:\WIPRO- Selenium with Python\selenium-python\ROBOT-FRAMEWORK">
-<suite id="s1-s1-s1" name="TC-06-datadriven-csv" source="D:\WIPRO- Selenium with Python\selenium-python\ROBOT-FRAMEWORK\TC-06-datadriven-csv.robot">
-<test id="s1-s1-s1-t1" name="Login Test With CSV Data" line="23">
-<status status="FAIL" start="2026-01-30T18:05:29.433373" elapsed="0.001699">Test cannot be empty.</status>
+<suite id="s1-s1-s1" name="TC-DailyQues14-2" source="D:\WIPRO- Selenium with Python\selenium-python\ROBOT-FRAMEWORK\TC-DailyQues14-2.robot">
+<test id="s1-s1-s1-t1" name="Browser Automation With BuiltIn Keywords" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-02T23:34:08.533220" level="INFO">Opening browser 'Chrome' to base url 'https://www.selenium.dev/selenium/web/web-form.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-02T23:34:08.532676" elapsed="2.480483"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.013529" elapsed="0.034392"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-02T23:34:11.048921" level="INFO">Typing text 'RobotFramework' into text field 'name=my-text'.</msg>
+<arg>name=my-text</arg>
+<arg>RobotFramework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.048218" elapsed="0.126631"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Text entered in text box</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.175213" elapsed="0.001365"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-02T23:34:11.177884" level="INFO">Clicking element 'id=my-radio-1'.</msg>
+<arg>id=my-radio-1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.177019" elapsed="0.075749"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Radio button selected</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.253116" elapsed="0.000640"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-02T23:34:11.254389" level="INFO">Clicking element 'id=my-check-1'.</msg>
+<arg>id=my-check-1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.253987" elapsed="0.070504"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Check box selected</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.324718" elapsed="0.000496"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-02T23:34:11.325662" level="INFO">Selecting options from selection list 'name=my-select' by label Two.</msg>
+<arg>name=my-select</arg>
+<arg>Two</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.325367" elapsed="0.089273"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Dropdown value selected</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.414946" elapsed="0.000541"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-02-02T23:34:11.421190" level="INFO">${title} = Web form</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.415635" elapsed="0.005788"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Page title is available</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.422615" elapsed="0.000513"/>
+</kw>
+<arg>'${title}' != ''</arg>
+<arg>Log To Console</arg>
+<arg>Page title is available</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.421711" elapsed="0.001550"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-02T23:34:16.424179" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-02T23:34:11.423414" elapsed="5.001082"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-02T23:34:16.424745" elapsed="2.164924"/>
+</kw>
+<status status="PASS" start="2026-02-02T23:34:08.530046" elapsed="10.059901"/>
 </test>
-<status status="FAIL" start="2026-01-30T18:05:29.410880" elapsed="0.025538"/>
+<status status="PASS" start="2026-02-02T23:34:08.194263" elapsed="10.397581"/>
 </suite>
-<status status="FAIL" start="2026-01-30T18:05:29.408518" elapsed="0.029412"/>
+<status status="PASS" start="2026-02-02T23:34:08.189852" elapsed="10.403997"/>
 </suite>
-<status status="FAIL" start="2026-01-30T18:05:29.379809" elapsed="0.059327"/>
+<status status="PASS" start="2026-02-02T23:34:08.143008" elapsed="10.452231"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Selenium-Python" id="s1" pass="0" fail="1" skip="0">Selenium-Python</stat>
-<stat name="ROBOT-FRAMEWORK" id="s1-s1" pass="0" fail="1" skip="0">Selenium-Python.ROBOT-FRAMEWORK</stat>
-<stat name="TC-06-datadriven-csv" id="s1-s1-s1" pass="0" fail="1" skip="0">Selenium-Python.ROBOT-FRAMEWORK.TC-06-datadriven-csv</stat>
+<stat name="Selenium-Python" id="s1" pass="1" fail="0" skip="0">Selenium-Python</stat>
+<stat name="ROBOT-FRAMEWORK" id="s1-s1" pass="1" fail="0" skip="0">Selenium-Python.ROBOT-FRAMEWORK</stat>
+<stat name="TC-DailyQues14-2" id="s1-s1-s1" pass="1" fail="0" skip="0">Selenium-Python.ROBOT-FRAMEWORK.TC-DailyQues14-2</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-01-30T18:05:29.428516" level="ERROR">[ DataDriver ] Error in robot file:
-  File "D:\WIPRO- Selenium with Python\selenium-python\ROBOT-FRAMEWORK\TC-06-datadriven-csv.robot", line 0</msg>
-<msg time="2026-01-30T18:05:29.429670" level="ERROR">In source file:
-  File "D:\WIPRO- Selenium with Python\selenium-python\ROBOT-FRAMEWORK\DDtestdata.csv", line 0</msg>
-<msg time="2026-01-30T18:05:29.432600" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: ValueError: Unassigned requiered argument detected: ${username}.</msg>
 </errors>
 </robot>
