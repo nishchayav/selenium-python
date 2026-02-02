@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-30T20:53:12.947195" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\WIPRO- Selenium with Python\selenium-python\job-portal-automation\tests">
+<suite id="s1-s1" name="Test Filters" source="D:\WIPRO- Selenium with Python\selenium-python\job-portal-automation\tests\test_filters.robot">
+<kw name="Open Job Portal" owner="searchkeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-30T20:53:13.248894" level="INFO">Opening browser 'Chrome' to base url 'https://example-job-portal.com'.</msg>
+<msg time="2026-01-30T20:53:15.483646" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-30T20:53:15.483873" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-01-30T20:53:13.248665" elapsed="2.255330">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-01-30T20:53:15.504233" elapsed="0.000035"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-30T20:53:15.504360" elapsed="0.000022"/>
+</kw>
+<status status="FAIL" start="2026-01-30T20:53:13.247972" elapsed="2.256539">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</kw>
+<test id="s1-s1-t1" name="Validate Job Filters Functionality" line="11">
+<status status="FAIL" start="2026-01-30T20:53:15.504600" elapsed="0.000545">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</test>
+<test id="s1-s1-t2" name="Validate Sorting Functionality" line="19">
+<status status="FAIL" start="2026-01-30T20:53:15.506419" elapsed="0.000414">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</test>
+<kw name="Close Browser Session" owner="searchkeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-30T20:53:15.508195" elapsed="2.152846"/>
+</kw>
+<status status="PASS" start="2026-01-30T20:53:15.507979" elapsed="2.153185"/>
+</kw>
+<status status="FAIL" start="2026-01-30T20:53:12.987053" elapsed="4.674151">Suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</suite>
+<suite id="s1-s2" name="Test Jobsearch" source="D:\WIPRO- Selenium with Python\selenium-python\job-portal-automation\tests\test_jobsearch.robot">
+<kw name="Open Job Portal" owner="searchkeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-30T20:53:17.666055" level="INFO">Opening browser 'Chrome' to base url 'https://example-job-portal.com'.</msg>
+<msg time="2026-01-30T20:53:18.543969" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-30T20:53:18.544170" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-01-30T20:53:17.665855" elapsed="0.879930">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-01-30T20:53:18.546031" elapsed="0.000043"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-30T20:53:18.546187" elapsed="0.000029"/>
+</kw>
+<status status="FAIL" start="2026-01-30T20:53:17.665654" elapsed="0.880711">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</kw>
+<test id="s1-s2-t1" name="Validate Job Search Functionality" line="10">
+<status status="FAIL" start="2026-01-30T20:53:18.546484" elapsed="0.000466">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</test>
+<test id="s1-s2-t2" name="Validate No Results Scenario" line="15">
+<status status="FAIL" start="2026-01-30T20:53:18.547633" elapsed="0.000427">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</test>
+<test id="s1-s2-t3" name="Validate Job Details Page" line="19">
+<status status="FAIL" start="2026-01-30T20:53:18.548667" elapsed="0.000429">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</test>
+<kw name="Close Browser Session" owner="searchkeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-30T20:53:18.550292" elapsed="2.138479"/>
+</kw>
+<status status="PASS" start="2026-01-30T20:53:18.550014" elapsed="2.138891"/>
+</kw>
+<status status="FAIL" start="2026-01-30T20:53:17.662066" elapsed="3.026880">Suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=144.0.7559.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7260fa535
+	0x7ff7260fa590
+	0x7ff725ea10bd
+	0x7ff725e9dbe4
+	0x7ff725e8e071
+	0x7ff725e8ff5f
+	0x7ff725e8e611
+	0x7ff725e8dddb
+	0x7ff725e8da91
+	0x7ff725e8b6a7
+	0x7ff725e8be22
+	0x7ff725ea5366
+	0x7ff725f4ad54
+	0x7ff725f25a3a
+	0x7ff725f49ef5
+	0x7ff725eecc9c
+	0x7ff725eedbe3
+	0x7ff7263d7b60
+	0x7ff7263d1f5d
+	0x7ff7263f311a
+	0x7ff7261160a5
+	0x7ff72611e73c
+	0x7ff726103844
+	0x7ff7261039f6
+	0x7ff7260e9a07
+	0x7ffe992ee8d7
+	0x7ffe9976c53c
+</status>
+</suite>
+<status status="FAIL" start="2026-01-30T20:53:12.948753" elapsed="7.741170"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="5" skip="0">Tests</stat>
+<stat name="Test Filters" id="s1-s1" pass="0" fail="2" skip="0">Tests.Test Filters</stat>
+<stat name="Test Jobsearch" id="s1-s2" pass="0" fail="3" skip="0">Tests.Test Jobsearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
