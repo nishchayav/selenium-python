@@ -1,0 +1,6 @@
+first_name,last_name,email,phone,password,product_name,quantity
+John,Doe,johndoe{random}@example.com,1234567890,Password123,HP,2
+Jane,Smith,janesmith{random}@test.com,9876543210,SecurePass456,HP,3
+Bob,Wilson,bobwilson{random}@outlook.com,5550101122,BobSafe789,iPhone,1
+Alice,Brown,alicebrown{random}@proton.me,4440202233,AliceP@ss112,MacBook,1
+Charlie,Davis,cdavis{random}@gmail.com,3330303344,CharlieD999,HTC,5
