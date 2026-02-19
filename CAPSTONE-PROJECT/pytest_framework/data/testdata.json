@@ -1,0 +1,11 @@
+{
+  "user": {
+    "first_name": "Nish",
+    "last_name": "Vish",
+    "email": "nish_test@example.com",
+    "telephone": "9999999999",
+    "password": "Test@123"
+  },
+  "search_product": "Canon",
+  "quantity": "1"
+}
