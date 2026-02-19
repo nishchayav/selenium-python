@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-17T20:33:12.386638" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\WIPRO- Selenium with Python\selenium-python\CAPSTONE-PROJECT\robot_framework\tests">
+<suite id="s1-s1" name="Cart Tests" source="D:\WIPRO- Selenium with Python\selenium-python\CAPSTONE-PROJECT\robot_framework\tests\cart_tests.robot">
+<kw name="Open Browser To Application" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:33:12.689031" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce-playground.lambdatest.io/index.php'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-17T20:33:12.688738" elapsed="5.379130"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-17T20:33:18.068449" elapsed="0.081087"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-17T20:33:18.149815" elapsed="0.001623"/>
+</kw>
+<kw name="Handle Cookie Popup" owner="common_keywords">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:33:23.579388" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:33:23.579566" level="FAIL">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:33:18.152626" elapsed="5.430110">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:33:18.152102" elapsed="5.430739"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:33:23.583480" level="INFO">Clicking element 'xpath=//button[contains(text(),'Accept')]'.</msg>
+<msg time="2026-02-17T20:33:28.760251" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:33:28.760479" level="FAIL">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-17T20:33:23.583301" elapsed="5.181180">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:33:23.582982" elapsed="5.181691"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:33:18.151787" elapsed="10.613039"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-17T20:33:28.765614" level="INFO">Browser Launched Successfully</msg>
+<arg>Browser Launched Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-17T20:33:28.765040" elapsed="0.000681"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:33:12.688137" elapsed="16.077711"/>
+</kw>
+<test id="s1-s1-t1" name="Add Product To Cart" line="8">
+<kw name="Search Product" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_BOX}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-17T20:33:28.767121" elapsed="0.021910"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:33:28.789597" level="INFO">Typing text 'iPhone' into text field 'name=search'.</msg>
+<arg>${SEARCH_BOX}</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:33:28.789273" elapsed="0.082297"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:33:28.872167" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:33:28.871830" elapsed="3.683866"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=(//div[@class='product-thumb'])[1]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-17T20:33:32.555878" elapsed="0.016135"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:33:32.572479" level="INFO">Clicking element 'xpath=(//div[@class='product-thumb'])[1]//a'.</msg>
+<arg>xpath=(//div[@class='product-thumb'])[1]//a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:33:32.572235" elapsed="4.208568"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:33:52.583445" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:33:52.583584" level="FAIL">Element 'id=button-cart' not visible after 15 seconds.</msg>
+<arg>${ADD_TO_CART}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:33:36.780974" elapsed="15.803406">Element 'id=button-cart' not visible after 15 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-17T20:33:52.584544" elapsed="0.000030"/>
+</kw>
+<arg>iPhone</arg>
+<status status="FAIL" start="2026-02-17T20:33:28.766775" elapsed="23.817903">Element 'id=button-cart' not visible after 15 seconds.</status>
+</kw>
+<kw name="Add Product To Cart" owner="common_keywords">
+<status status="NOT RUN" start="2026-02-17T20:33:52.584974" elapsed="0.000107"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:33:28.765965" elapsed="23.819483">Element 'id=button-cart' not visible after 15 seconds.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-17T20:33:52.586133" elapsed="2.197983"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:33:12.425296" elapsed="42.358940"/>
+</suite>
+<suite id="s1-s2" name="Login Tests" source="D:\WIPRO- Selenium with Python\selenium-python\CAPSTONE-PROJECT\robot_framework\tests\login_tests.robot">
+<kw name="Open Browser To Application" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:33:54.811007" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce-playground.lambdatest.io/index.php'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-17T20:33:54.810814" elapsed="5.322621"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-17T20:34:00.133670" elapsed="0.078509"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-17T20:34:00.212396" elapsed="0.000946"/>
+</kw>
+<kw name="Handle Cookie Popup" owner="common_keywords">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:34:05.580274" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:34:05.580429" level="FAIL">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:34:00.214025" elapsed="5.367309">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:34:00.213729" elapsed="5.367702"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:34:05.582046" level="INFO">Clicking element 'xpath=//button[contains(text(),'Accept')]'.</msg>
+<msg time="2026-02-17T20:34:10.759298" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:34:10.759484" level="FAIL">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-17T20:34:05.581871" elapsed="5.178587">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:34:05.581569" elapsed="5.178995"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:34:00.213522" elapsed="10.547113"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-17T20:34:10.761019" level="INFO">Browser Launched Successfully</msg>
+<arg>Browser Launched Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-17T20:34:10.760761" elapsed="0.000302"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:33:54.810605" elapsed="15.950516"/>
+</kw>
+<test id="s1-s2-t1" name="Registration With Multiple Users" line="10">
+<status status="FAIL" start="2026-02-17T20:34:10.761194" elapsed="0.001096">Test cannot be empty.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-17T20:34:10.762953" elapsed="2.207986"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:33:54.785186" elapsed="18.185861"/>
+</suite>
+<suite id="s1-s3" name="Logout Tests" source="D:\WIPRO- Selenium with Python\selenium-python\CAPSTONE-PROJECT\robot_framework\tests\logout_tests.robot">
+<kw name="Open Browser To Application" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:34:12.975716" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce-playground.lambdatest.io/index.php'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-17T20:34:12.975527" elapsed="5.339495"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-17T20:34:18.315290" elapsed="0.078542"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-17T20:34:18.394061" elapsed="0.001031"/>
+</kw>
+<kw name="Handle Cookie Popup" owner="common_keywords">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:34:23.778500" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:34:23.778640" level="FAIL">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:34:18.395892" elapsed="5.383546">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:34:18.395546" elapsed="5.383988"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:34:23.780141" level="INFO">Clicking element 'xpath=//button[contains(text(),'Accept')]'.</msg>
+<msg time="2026-02-17T20:34:28.974430" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:34:28.974580" level="FAIL">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-17T20:34:23.779974" elapsed="5.195683">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:34:23.779681" elapsed="5.196072"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:34:18.395293" elapsed="10.580527"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-17T20:34:28.976188" level="INFO">Browser Launched Successfully</msg>
+<arg>Browser Launched Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-17T20:34:28.975940" elapsed="0.000290"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:34:12.975341" elapsed="16.000943"/>
+</kw>
+<test id="s1-s3-t1" name="Logout and Session Validation" line="8">
+<kw name="Click My Account" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:34:50.056870" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:34:50.057004" level="FAIL">Element 'xpath=//span[text()='My account']' not visible after 20 seconds.</msg>
+<arg>${MY_ACCOUNT}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:34:28.977128" elapsed="21.080714">Element 'xpath=//span[text()='My account']' not visible after 20 seconds.</status>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${MY_ACCOUNT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2026-02-17T20:34:50.058005" elapsed="0.000030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${MY_ACCOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-17T20:34:50.058111" elapsed="0.000043"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:34:28.976880" elapsed="21.081371">Element 'xpath=//span[text()='My account']' not visible after 20 seconds.</status>
+</kw>
+<kw name="Click Login" owner="common_keywords">
+<status status="NOT RUN" start="2026-02-17T20:34:50.058506" elapsed="0.000031"/>
+</kw>
+<kw name="Login User" owner="common_keywords">
+<arg>${VALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="NOT RUN" start="2026-02-17T20:34:50.058841" elapsed="0.000041"/>
+</kw>
+<kw name="Logout User" owner="common_keywords">
+<status status="NOT RUN" start="2026-02-17T20:34:50.059141" elapsed="0.000030"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2026-02-17T20:34:50.218037" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-17T20:34:50.059411" elapsed="0.158740"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:34:28.976337" elapsed="21.242038">Element 'xpath=//span[text()='My account']' not visible after 20 seconds.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-17T20:34:50.219200" elapsed="2.172289"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:34:12.971876" elapsed="39.419752"/>
+</suite>
+<suite id="s1-s4" name="Search Tests" source="D:\WIPRO- Selenium with Python\selenium-python\CAPSTONE-PROJECT\robot_framework\tests\search_tests.robot">
+<kw name="Open Browser To Application" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:34:52.403925" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce-playground.lambdatest.io/index.php'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-17T20:34:52.403753" elapsed="5.399234"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-17T20:34:57.803187" elapsed="0.099559"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-17T20:34:57.903008" elapsed="0.001225"/>
+</kw>
+<kw name="Handle Cookie Popup" owner="common_keywords">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:03.313465" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:35:03.313596" level="FAIL">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:34:57.904960" elapsed="5.409452">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:34:57.904652" elapsed="5.409855"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:03.315119" level="INFO">Clicking element 'xpath=//button[contains(text(),'Accept')]'.</msg>
+<msg time="2026-02-17T20:35:08.467815" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:35:08.468017" level="FAIL">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-17T20:35:03.314942" elapsed="5.154430">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:35:03.314644" elapsed="5.154827"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:34:57.904437" elapsed="10.565102"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-17T20:35:08.470103" level="INFO">Browser Launched Successfully</msg>
+<arg>Browser Launched Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-17T20:35:08.469676" elapsed="0.000497"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:34:52.403558" elapsed="16.066704"/>
+</kw>
+<test id="s1-s4-t1" name="Search Product and View Details" line="8">
+<kw name="Search Product" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_BOX}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-17T20:35:08.471177" elapsed="0.019922"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:08.491533" level="INFO">Typing text 'iPhone' into text field 'name=search'.</msg>
+<arg>${SEARCH_BOX}</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:35:08.491274" elapsed="0.091528"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:08.583256" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:35:08.583013" elapsed="2.879789"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=(//div[@class='product-thumb'])[1]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-17T20:35:11.463147" elapsed="0.014819"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:11.478356" level="INFO">Clicking element 'xpath=(//div[@class='product-thumb'])[1]//a'.</msg>
+<arg>xpath=(//div[@class='product-thumb'])[1]//a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:35:11.478156" elapsed="3.542352"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:30.865771" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-46.png"&gt;&lt;img src="selenium-screenshot-46.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:35:30.865973" level="FAIL">Element 'id=button-cart' not visible after 15 seconds.</msg>
+<arg>${ADD_TO_CART}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:35:15.020770" elapsed="15.846455">Element 'id=button-cart' not visible after 15 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-17T20:35:30.867467" elapsed="0.000038"/>
+</kw>
+<arg>iPhone</arg>
+<status status="FAIL" start="2026-02-17T20:35:08.470865" elapsed="22.396758">Element 'id=button-cart' not visible after 15 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-02-17T20:35:08.470326" elapsed="22.397729">Element 'id=button-cart' not visible after 15 seconds.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-17T20:35:30.868799" elapsed="2.218405"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:34:52.392537" elapsed="40.694764"/>
+</suite>
+<suite id="s1-s5" name="Update Cart Tests" source="D:\WIPRO- Selenium with Python\selenium-python\CAPSTONE-PROJECT\robot_framework\tests\update_cart_tests.robot">
+<kw name="Open Browser To Application" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:33.092300" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce-playground.lambdatest.io/index.php'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-17T20:35:33.092095" elapsed="5.723455"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-17T20:35:38.815756" elapsed="0.078559"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-17T20:35:38.894489" elapsed="0.001023"/>
+</kw>
+<kw name="Handle Cookie Popup" owner="common_keywords">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:44.263853" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:35:44.263993" level="FAIL">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:35:38.896220" elapsed="5.368621">Element 'xpath=//button[contains(text(),'Accept')]' not visible after 5 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:35:38.895909" elapsed="5.369028"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:44.265539" level="INFO">Clicking element 'xpath=//button[contains(text(),'Accept')]'.</msg>
+<msg time="2026-02-17T20:35:49.444060" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:35:49.444204" level="FAIL">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</msg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-17T20:35:44.265368" elapsed="5.179794">Element with locator 'xpath=//button[contains(text(),'Accept')]' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>${COOKIE_ACCEPT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-17T20:35:44.265072" elapsed="5.180184"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:35:38.895712" elapsed="10.549612"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-17T20:35:49.445690" level="INFO">Browser Launched Successfully</msg>
+<arg>Browser Launched Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-17T20:35:49.445440" elapsed="0.000292"/>
+</kw>
+<status status="PASS" start="2026-02-17T20:35:33.091885" elapsed="16.353901"/>
+</kw>
+<test id="s1-s5-t1" name="Update Cart Quantity and Remove Item" line="8">
+<kw name="Search Product" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_BOX}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-17T20:35:49.446545" elapsed="0.016021"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:49.463133" level="INFO">Typing text 'HP' into text field 'name=search'.</msg>
+<arg>${SEARCH_BOX}</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:35:49.462778" elapsed="0.076054"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:49.539704" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:35:49.539220" elapsed="0.069438"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=(//div[@class='product-thumb'])[1]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-17T20:35:49.608897" elapsed="3.691872"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:35:53.301128" level="INFO">Clicking element 'xpath=(//div[@class='product-thumb'])[1]//a'.</msg>
+<arg>xpath=(//div[@class='product-thumb'])[1]//a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T20:35:53.300941" elapsed="3.075021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-17T20:36:12.200484" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T20:36:12.200617" level="FAIL">Element 'id=button-cart' not visible after 15 seconds.</msg>
+<arg>${ADD_TO_CART}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-17T20:35:56.376193" elapsed="15.825228">Element 'id=button-cart' not visible after 15 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-17T20:36:12.201600" elapsed="0.000031"/>
+</kw>
+<arg>HP</arg>
+<status status="FAIL" start="2026-02-17T20:35:49.446321" elapsed="22.755399">Element 'id=button-cart' not visible after 15 seconds.</status>
+</kw>
+<kw name="Add Product To Cart" owner="common_keywords">
+<status status="NOT RUN" start="2026-02-17T20:36:12.202002" elapsed="0.000031"/>
+</kw>
+<kw name="Open Cart" owner="common_keywords">
+<status status="NOT RUN" start="2026-02-17T20:36:12.202226" elapsed="0.000029"/>
+</kw>
+<kw name="Update Cart Quantity" owner="common_keywords">
+<arg>2</arg>
+<status status="NOT RUN" start="2026-02-17T20:36:12.202480" elapsed="0.000041"/>
+</kw>
+<kw name="Remove Item From Cart" owner="common_keywords">
+<status status="NOT RUN" start="2026-02-17T20:36:12.202743" elapsed="0.000037"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:35:49.445841" elapsed="22.757143">Element 'id=button-cart' not visible after 15 seconds.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-17T20:36:12.203523" elapsed="2.196432"/>
+</kw>
+<status status="FAIL" start="2026-02-17T20:35:33.088225" elapsed="41.311847"/>
+</suite>
+<status status="FAIL" start="2026-02-17T20:33:12.388158" elapsed="182.012979"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="5" skip="0">Tests</stat>
+<stat name="Cart Tests" id="s1-s1" pass="0" fail="1" skip="0">Tests.Cart Tests</stat>
+<stat name="Login Tests" id="s1-s2" pass="0" fail="1" skip="0">Tests.Login Tests</stat>
+<stat name="Logout Tests" id="s1-s3" pass="0" fail="1" skip="0">Tests.Logout Tests</stat>
+<stat name="Search Tests" id="s1-s4" pass="0" fail="1" skip="0">Tests.Search Tests</stat>
+<stat name="Update Cart Tests" id="s1-s5" pass="0" fail="1" skip="0">Tests.Update Cart Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-17T20:33:54.807722" level="ERROR">[ DataDriver ] Error in robot file:
+  File "D:\WIPRO- Selenium with Python\selenium-python\CAPSTONE-PROJECT\robot_framework\tests\login_tests.robot", line 0</msg>
+<msg time="2026-02-17T20:33:54.807891" level="ERROR">In source file:
+  File "D:\WIPRO- Selenium with Python\selenium-python\CAPSTONE-PROJECT\robot_framework\tests\..\testdata\registration_data.csv", line 0</msg>
+<msg time="2026-02-17T20:33:54.810254" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: ValueError: Unassigned requiered argument detected: ${firstname}.</msg>
+</errors>
+</robot>
