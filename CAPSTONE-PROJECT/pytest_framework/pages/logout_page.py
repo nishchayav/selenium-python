@@ -6,18 +6,24 @@ import time
 
 class LogoutPage(BasePage):
 
-    MY_ACCOUNT = (By.XPATH, "//a[@data-toggle='dropdown']//span[contains(text(),'My account')]")
-    LOGOUT = (By.LINK_TEXT, "Logout")
-    LOGOUT_HEADER = (By.CSS_SELECTOR, "h1.page-title")
-    CONTINUE_BUTTON = (By.CSS_SELECTOR, "a.btn.btn-primary")
+    SIDEBAR_LOGOUT = (By.XPATH, "//a[contains(@href,'route=account/logout') and contains(@class,'list-group-item')]")
+
+    LOGOUT_HEADER = (By.XPATH, "//h1[contains(text(),'Account Logout')]")
 
     def logout(self):
         wait = WebDriverWait(self.driver, 20)
 
-        wait.until(EC.element_to_be_clickable(self.MY_ACCOUNT)).click()
-        wait.until(EC.element_to_be_clickable(self.LOGOUT)).click()
-        wait.until(EC.visibility_of_element_located(self.LOGOUT_HEADER))
-        time.sleep(5)
+        # Ensure login
+        wait.until(EC.url_contains("account"))
+
+        wait.until(
+            EC.element_to_be_clickable(self.SIDEBAR_LOGOUT)
+        ).click()
+
+        # for logout
+        wait.until(
+            EC.visibility_of_element_located(self.LOGOUT_HEADER)
+        )
 
     def is_logout_successful(self):
         return "Account Logout" in self.driver.page_source

@@ -12,6 +12,4 @@ def test_logout_and_session_validation(driver, registered_user):
     logout = LogoutPage(driver)
     logout.logout()
 
-
-
     assert logout.is_logout_successful()
