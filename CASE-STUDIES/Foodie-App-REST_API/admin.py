@@ -10,6 +10,7 @@ from user import ratings
 # 9. Approve Restaurant
 @admin_bp.route("/restaurants/<restaurant_id>/approve", methods=["PUT"])
 def approve_restaurant(restaurant_id):
+    restaurant_id = int(restaurant_id)
     if restaurant_id not in restaurants:
         return jsonify({"error": "Not found"}), 404
 
@@ -20,6 +21,7 @@ def approve_restaurant(restaurant_id):
 # 10. Disable Restaurant (Admin)
 @admin_bp.route("/restaurants/<restaurant_id>/disable", methods=["PUT"])
 def admin_disable_restaurant(restaurant_id):
+    restaurant_id = int(restaurant_id)
     if restaurant_id not in restaurants:
         return jsonify({"error": "Not found"}), 404
 

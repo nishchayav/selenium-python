@@ -1,16 +1,17 @@
 from flask import Blueprint, request, jsonify
-import uuid
+
 
 restaurant_bp = Blueprint("restaurant_bp", __name__, url_prefix="/api/v1")
-
+restaurant_id_counter = 1
 restaurants = {}
 
 # 1. Register Restaurant
 @restaurant_bp.route("/restaurants", methods=["POST"])
 def register_restaurant():
+    global restaurant_id_counter
     data = request.json
 
-    required_fields = ["name", "category", "location", "images", "contact"]
+    required_fields = ["name", "category", "location", "contact"]
     if not all(field in data for field in required_fields):
         return jsonify({"error": "Missing required fields"}), 400
 
@@ -19,18 +20,19 @@ def register_restaurant():
         if r["name"] == data["name"]:
             return jsonify({"error": "Restaurant already exists"}), 409
 
-    restaurant_id = str(uuid.uuid4())
-    data["id"] = restaurant_id
+    data["id"] = restaurant_id_counter
     data["approved"] = False
     data["disabled"] = False
 
-    restaurants[restaurant_id] = data
+    restaurants[restaurant_id_counter] = data
+    restaurant_id_counter += 1
     return jsonify(data), 201
 
 
 # 2. Update Restaurant Details
 @restaurant_bp.route("/restaurants/<restaurant_id>", methods=["PUT"])
 def update_restaurant(restaurant_id):
+    restaurant_id = int(restaurant_id)
     if restaurant_id not in restaurants:
         return jsonify({"error": "Not found"}), 404
 
@@ -41,6 +43,7 @@ def update_restaurant(restaurant_id):
 # 3. Disable Restaurant
 @restaurant_bp.route("/restaurants/<restaurant_id>/disable", methods=["PUT"])
 def disable_restaurant(restaurant_id):
+    restaurant_id = int(restaurant_id)
     if restaurant_id not in restaurants:
         return jsonify({"error": "Not found"}), 404
 
@@ -51,6 +54,7 @@ def disable_restaurant(restaurant_id):
 # 4. View Restaurant Profile
 @restaurant_bp.route("/restaurants/<restaurant_id>", methods=["GET"])
 def view_restaurant(restaurant_id):
+    restaurant_id = int(restaurant_id)
     if restaurant_id not in restaurants:
         return jsonify({"error": "Not found"}), 404
 

@@ -1,24 +1,25 @@
 from flask import Blueprint, request, jsonify
-import uuid
+
 
 order_bp = Blueprint("order_bp", __name__, url_prefix="/api/v1")
-
+order_id = 1
 orders = {}
 
 # 15. Place Order
 @order_bp.route("/orders", methods=["POST"])
 def place_order():
+    global order_id
     data = request.json
 
-    required_fields = ["user_id", "restaurant_id", "dishes"]
+    required_fields = ["user_id", "restaurant_id", "dish"]
     if not all(field in data for field in required_fields):
         return jsonify({"error": "Missing fields"}), 400
 
-    order_id = str(uuid.uuid4())
     data["id"] = order_id
     data["status"] = "Placed"
 
     orders[order_id] = data
+    order_id += 1
     return jsonify(data), 201
 
 

@@ -98,7 +98,7 @@ ${BASE}           /api/v1
     ${body}=    Create Dictionary
     ...    user_id=${USER_ID}
     ...    restaurant_id=${RESTAURANT_ID}
-    ...    dishes=["Paneer"]
+    ...    dish=["Paneer"]
     ${response}=    POST On Session    foodie    ${BASE}/orders    json=${body}
     Should Be Equal As Integers    ${response.status_code}    201
     ${json}=    Set Variable    ${response.json()}
